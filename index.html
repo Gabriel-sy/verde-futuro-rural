@@ -1,24 +1,316 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>verde-futuro-rural</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
-
-    <meta property="og:title" content="verde-futuro-rural" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <title>AgroEnergia - Soluções Sustentáveis para o Campo</title>
+    <meta name="description" content="Reduzimos os custos de energia para agricultores familiares através de microcrédito e soluções sustentáveis" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
   </head>
-
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav">
+        <div class="nav-container">
+          <div class="logo">
+            <span class="logo-icon">🌱</span>
+            <span class="logo-text">AgroEnergia</span>
+          </div>
+          <ul class="nav-menu">
+            <li><a href="#home" class="nav-link">Início</a></li>
+            <li><a href="#sobre" class="nav-link">Sobre</a></li>
+            <li><a href="#beneficios" class="nav-link">Benefícios</a></li>
+            <li><a href="#contato" class="nav-link">Contato</a></li>
+          </ul>
+          <button class="nav-toggle" id="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            Energia mais barata para o seu 
+            <span class="highlight">agronegócio familiar</span>
+          </h1>
+          <p class="hero-description">
+            Reduzimos até 70% dos custos com energia elétrica através de microcrédito facilitado 
+            e soluções sustentáveis pensadas especialmente para pequenos produtores rurais.
+          </p>
+          <div class="hero-buttons">
+            <a href="#contato" class="btn btn-primary">Solicitar Proposta</a>
+            <a href="#sobre" class="btn btn-secondary">Saiba Mais</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=600&h=400&fit=crop&crop=faces" alt="Agricultor no campo" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <h3 class="stat-number">70%</h3>
+            <p class="stat-label">Redução nos custos</p>
+          </div>
+          <div class="stat-item">
+            <h3 class="stat-number">500+</h3>
+            <p class="stat-label">Propriedades atendidas</p>
+          </div>
+          <div class="stat-item">
+            <h3 class="stat-number">R$ 2M</h3>
+            <p class="stat-label">Em economia gerada</p>
+          </div>
+          <div class="stat-item">
+            <h3 class="stat-number">24h</h3>
+            <p class="stat-label">Resposta da proposta</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="about">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Como funciona nossa solução</h2>
+          <p class="section-subtitle">
+            Simplificamos o acesso a energia sustentável com microcrédito facilitado
+          </p>
+        </div>
+        <div class="about-grid">
+          <div class="about-item">
+            <div class="about-icon">📋</div>
+            <h3>1. Análise da propriedade</h3>
+            <p>Avaliamos o consumo atual e identificamos as melhores oportunidades de economia</p>
+          </div>
+          <div class="about-item">
+            <div class="about-icon">💰</div>
+            <h3>2. Microcrédito aprovado</h3>
+            <p>Facilitamos o acesso ao crédito com nossos parceiros bancários, sem burocracia</p>
+          </div>
+          <div class="about-item">
+            <div class="about-icon">⚡</div>
+            <h3>3. Implementação</h3>
+            <p>Instalamos sistemas de energia eficiente adequados à sua realidade rural</p>
+          </div>
+          <div class="about-item">
+            <div class="about-icon">📈</div>
+            <h3>4. Economia garantida</h3>
+            <p>Acompanhamos os resultados e garantimos a redução prometida na conta de luz</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="beneficios" class="benefits">
+      <div class="container">
+        <div class="benefits-content">
+          <div class="benefits-text">
+            <h2 class="section-title">Por que escolher a AgroEnergia?</h2>
+            <div class="benefit-list">
+              <div class="benefit-item">
+                <span class="benefit-icon">✅</span>
+                <div>
+                  <h4>Crédito sem complicação</h4>
+                  <p>Processo simplificado e rápido, pensado para o agricultor familiar</p>
+                </div>
+              </div>
+              <div class="benefit-item">
+                <span class="benefit-icon">✅</span>
+                <div>
+                  <h4>Economia comprovada</h4>
+                  <p>Reduções de até 70% na conta de luz com garantia de resultado</p>
+                </div>
+              </div>
+              <div class="benefit-item">
+                <span class="benefit-icon">✅</span>
+                <div>
+                  <h4>Sustentabilidade</h4>
+                  <p>Soluções limpas que preservam o meio ambiente e reduzem custos</p>
+                </div>
+              </div>
+              <div class="benefit-item">
+                <span class="benefit-icon">✅</span>
+                <div>
+                  <h4>Suporte especializado</h4>
+                  <p>Equipe técnica que entende as necessidades do campo</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="benefits-image">
+            <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=500&h=600&fit=crop" alt="Agricultor com tecnologia" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contato" class="contact">
+      <div class="container">
+        <div class="contact-content">
+          <div class="contact-info">
+            <h2 class="section-title">Receba uma proposta personalizada</h2>
+            <p class="section-subtitle">
+              Preencha os dados da sua propriedade e nossa equipe entrará em contato em até 24 horas
+            </p>
+            <div class="contact-features">
+              <div class="feature">
+                <span class="feature-icon">🚀</span>
+                <span>Resposta em 24h</span>
+              </div>
+              <div class="feature">
+                <span class="feature-icon">💡</span>
+                <span>Consultoria gratuita</span>
+              </div>
+              <div class="feature">
+                <span class="feature-icon">🔒</span>
+                <span>Dados protegidos</span>
+              </div>
+            </div>
+          </div>
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="nome">Nome completo</label>
+              <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" name="telefone" required>
+              </div>
+              <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="propriedade">Nome da propriedade</label>
+              <input type="text" id="propriedade" name="propriedade" required>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cidade">Cidade</label>
+                <input type="text" id="cidade" name="cidade" required>
+              </div>
+              <div class="form-group">
+                <label for="estado">Estado</label>
+                <select id="estado" name="estado" required>
+                  <option value="">Selecione</option>
+                  <option value="AC">Acre</option>
+                  <option value="AL">Alagoas</option>
+                  <option value="AP">Amapá</option>
+                  <option value="AM">Amazonas</option>
+                  <option value="BA">Bahia</option>
+                  <option value="CE">Ceará</option>
+                  <option value="DF">Distrito Federal</option>
+                  <option value="ES">Espírito Santo</option>
+                  <option value="GO">Goiás</option>
+                  <option value="MA">Maranhão</option>
+                  <option value="MT">Mato Grosso</option>
+                  <option value="MS">Mato Grosso do Sul</option>
+                  <option value="MG">Minas Gerais</option>
+                  <option value="PA">Pará</option>
+                  <option value="PB">Paraíba</option>
+                  <option value="PR">Paraná</option>
+                  <option value="PE">Pernambuco</option>
+                  <option value="PI">Piauí</option>
+                  <option value="RJ">Rio de Janeiro</option>
+                  <option value="RN">Rio Grande do Norte</option>
+                  <option value="RS">Rio Grande do Sul</option>
+                  <option value="RO">Rondônia</option>
+                  <option value="RR">Roraima</option>
+                  <option value="SC">Santa Catarina</option>
+                  <option value="SP">São Paulo</option>
+                  <option value="SE">Sergipe</option>
+                  <option value="TO">Tocantins</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="area">Área da propriedade (hectares)</label>
+                <input type="number" id="area" name="area" min="0" step="0.1" required>
+              </div>
+              <div class="form-group">
+                <label for="cultura">Principal cultura</label>
+                <select id="cultura" name="cultura" required>
+                  <option value="">Selecione</option>
+                  <option value="milho">Milho</option>
+                  <option value="soja">Soja</option>
+                  <option value="cafe">Café</option>
+                  <option value="cana">Cana-de-açúcar</option>
+                  <option value="feijao">Feijão</option>
+                  <option value="arroz">Arroz</option>
+                  <option value="hortalicas">Hortaliças</option>
+                  <option value="frutas">Frutas</option>
+                  <option value="pecuaria">Pecuária</option>
+                  <option value="outros">Outros</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="energia">Gasto mensal aproximado com energia (R$)</label>
+              <select id="energia" name="energia" required>
+                <option value="">Selecione a faixa</option>
+                <option value="0-500">Até R$ 500</option>
+                <option value="500-1000">R$ 500 - R$ 1.000</option>
+                <option value="1000-2000">R$ 1.000 - R$ 2.000</option>
+                <option value="2000-5000">R$ 2.000 - R$ 5.000</option>
+                <option value="5000+">Acima de R$ 5.000</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="observacoes">Observações (opcional)</label>
+              <textarea id="observacoes" name="observacoes" rows="3" placeholder="Conte-nos mais sobre sua propriedade ou necessidades específicas"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              <span class="btn-text">Solicitar Proposta Gratuita</span>
+              <span class="btn-loading">Enviando...</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <div class="logo">
+              <span class="logo-icon">🌱</span>
+              <span class="logo-text">AgroEnergia</span>
+            </div>
+            <p>Transformando o futuro energético do agronegócio familiar brasileiro.</p>
+          </div>
+          <div class="footer-contact">
+            <h4>Contato</h4>
+            <p>📧 contato@agroenergia.com.br</p>
+            <p>📱 (11) 9999-9999</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 AgroEnergia. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
