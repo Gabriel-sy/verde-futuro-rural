@@ -260,12 +260,16 @@ function animateCounter(element, target, duration = 2000) {
       clearInterval(timer);
     }
     
-    // Format number based on target
+    // Format number based on target and content
     let displayValue;
-    if (target >= 1000000) {
-      displayValue = (current / 1000000).toFixed(1) + 'M';
-    } else if (target >= 1000) {
-      displayValue = Math.floor(current / 1000) + 'k';
+    const originalText = element.getAttribute('data-original') || element.textContent;
+    
+    if (originalText.includes('Até')) {
+      displayValue = `Até ${Math.floor(current)}%`;
+    } else if (originalText.includes('%')) {
+      displayValue = `${Math.floor(current)}%`;
+    } else if (originalText.includes('h')) {
+      displayValue = `${Math.floor(current)}h`;
     } else {
       displayValue = Math.floor(current);
     }
@@ -281,22 +285,26 @@ const statsObserver = new IntersectionObserver((entries) => {
       const statNumbers = entry.target.querySelectorAll('.stat-number');
       statNumbers.forEach(stat => {
         const text = stat.textContent;
+        stat.setAttribute('data-original', text);
         let target;
         
-        if (text.includes('M')) {
-          target = parseFloat(text) * 1000000;
-        } else if (text.includes('k')) {
-          target = parseFloat(text) * 1000;
-        } else if (text.includes('%')) {
-          target = parseInt(text);
-        } else if (text.includes('h')) {
-          target = parseInt(text);
+        if (text.includes('Até 70%')) {
+          target = 70;
+          stat.textContent = 'Até 0%';
+        } else if (text.includes('100%')) {
+          target = 100;
+          stat.textContent = '0%';
+        } else if (text.includes('0%')) {
+          target = 0;
+          stat.textContent = '100%'; // Start from 100 and go down to 0
+        } else if (text.includes('24h')) {
+          target = 24;
+          stat.textContent = '0h';
         } else {
           target = parseInt(text.replace(/\D/g, ''));
         }
         
         if (!isNaN(target)) {
-          stat.textContent = '0';
           setTimeout(() => animateCounter(stat, target), 200);
         }
       });
