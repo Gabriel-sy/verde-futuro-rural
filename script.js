@@ -340,7 +340,7 @@ if ('IntersectionObserver' in window) {
   });
 }
 
-// Add CSS for lazy loading and mobile menu
+// Add CSS for lazy loading
 const style = document.createElement('style');
 style.textContent = `
   img.lazy {
@@ -353,7 +353,7 @@ style.textContent = `
   }
   
   .nav-menu.active {
-    display: flex !important;
+    display: flex;
     position: absolute;
     top: 100%;
     left: 0;
