@@ -36,6 +36,7 @@ window.addEventListener("scroll", () => {
   }
 });
 
+<<<<<<< HEAD
 // Intersection Observer for animations
 const observerOptions = {
   threshold: 0.01, // Trigger when 10% of the element is visible
@@ -67,6 +68,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+=======
+>>>>>>> 61474ca0a693e37b5a0535b9a2acff7a602f7ff7
 // Form handling
 const contactForm = document.getElementById("contactForm");
 const submitButton = contactForm.querySelector('button[type="submit"]');
@@ -340,6 +343,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+<<<<<<< HEAD
 // Lazy loading for images
 if ("IntersectionObserver" in window) {
   const imageObserver = new IntersectionObserver((entries) => {
@@ -360,16 +364,11 @@ if ("IntersectionObserver" in window) {
 
 // Add CSS for lazy loading
 const style = document.createElement("style");
+=======
+// Add CSS for mobile menu
+const style = document.createElement('style');
+>>>>>>> 61474ca0a693e37b5a0535b9a2acff7a602f7ff7
 style.textContent = `
-  img.lazy {
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-  
-  img.lazy.loaded {
-    opacity: 1;
-  }
-  
   .nav-menu.active {
     display: flex;
     position: absolute;
