@@ -37,33 +37,6 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// Intersection Observer for animations
-const observerOptions = {
-  threshold: 0.1,
-  rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-}, observerOptions);
-
-// Add fade-in class to elements and observe them
-document.addEventListener('DOMContentLoaded', () => {
-  const elementsToAnimate = document.querySelectorAll(
-    '.hero-content, .stat-item, .about-item, .benefit-item, .contact-info, .contact-form'
-  );
-  
-  elementsToAnimate.forEach((el, index) => {
-    el.classList.add('fade-in');
-    el.style.transitionDelay = `${index * 0.1}s`;
-    observer.observe(el);
-  });
-});
-
 // Form handling
 const contactForm = document.getElementById('contactForm');
 const submitButton = contactForm.querySelector('button[type="submit"]');
@@ -322,36 +295,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// Lazy loading for images
-if ('IntersectionObserver' in window) {
-  const imageObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const img = entry.target;
-        img.classList.add('loaded');
-        imageObserver.unobserve(img);
-      }
-    });
-  });
-  
-  document.querySelectorAll('img').forEach(img => {
-    img.classList.add('lazy');
-    imageObserver.observe(img);
-  });
-}
-
-// Add CSS for lazy loading
+// Add CSS for mobile menu
 const style = document.createElement('style');
 style.textContent = `
-  img.lazy {
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-  
-  img.lazy.loaded {
-    opacity: 1;
-  }
-  
   .nav-menu.active {
     display: flex;
     position: absolute;
