@@ -359,7 +359,7 @@ if ("IntersectionObserver" in window) {
 }
 
 // Add CSS for mobile menu
-const style = document.createElement('style');
+const style = document.createElement("style");
 style.textContent = `
   .nav-menu.active {
     display: flex;
@@ -383,7 +383,7 @@ style.textContent = `
   }
   
   .nav-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
-  }
+  transform: rotate(-45deg) translate(5px, -5px);
+}
 `;
 document.head.appendChild(style);
