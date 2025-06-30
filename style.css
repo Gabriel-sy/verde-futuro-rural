@@ -134,12 +134,12 @@ body {
 
 /* Hero Section */
 .hero {
-  padding: 120px 0 80px;
-  background: linear-gradient(
-    135deg,
-    var(--light-green) 0%,
-    var(--secondary-green) 100%
-  );
+  padding: 280px 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=1920&h=1080&fit=crop');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--white);
   overflow: hidden;
 }
 
@@ -147,10 +147,14 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
 }
 
 .hero-title {
@@ -159,7 +163,7 @@ body {
   font-weight: 700;
   line-height: 1.1;
   margin-bottom: 1.5rem;
-  color: var(--text-dark);
+  color: var(--white);
 }
 
 .highlight {
@@ -170,7 +174,7 @@ body {
 .highlight::after {
   content: "";
   position: absolute;
-  bottom: 4px;
+  bottom: 1px;
   left: 0;
   right: 0;
   height: 8px;
@@ -181,22 +185,16 @@ body {
 
 .hero-description {
   font-size: 1.2rem;
-  color: var(--text-medium);
+  color: rgba(255, 255, 255, 0.9);
   margin-bottom: 2rem;
   line-height: 1.7;
 }
 
 .hero-buttons {
   display: flex;
+  justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
-}
-
-.hero-image img {
-  width: 100%;
-  border-radius: var(--border-radius-xl);
-  box-shadow: var(--shadow-xl);
-  transition: transform 0.3s ease;
 }
 
 /* Button Styles */
@@ -225,19 +223,18 @@ body {
 .btn-primary:hover {
   background: var(--primary-green-dark);
   border-color: var(--primary-green-dark);
-  transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
 }
 
 .btn-secondary {
   background: transparent;
-  color: var(--primary-green);
-  border-color: var(--primary-green);
+  color: var(--white);
+  border-color: var(--white);
 }
 
 .btn-secondary:hover {
-  background: var(--primary-green);
-  color: var(--white);
+  background: var(--white);
+  color: var(--primary-green);
 }
 
 .btn-full {
@@ -569,7 +566,6 @@ body {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-  .hero-container,
   .benefits-content,
   .contact-content {
     grid-template-columns: 1fr;
