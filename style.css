@@ -141,6 +141,7 @@ body {
   background-repeat: no-repeat;
   color: var(--white);
   overflow: hidden;
+  min-height: 100vh;
 }
 
 .hero-container {
@@ -168,19 +169,10 @@ body {
 
 .highlight {
   color: var(--primary-green);
-  position: relative;
-}
-
-.highlight::after {
-  content: "";
-  position: absolute;
-  bottom: 1px;
-  left: 0;
-  right: 0;
-  height: 8px;
-  background: var(--accent-green);
-  z-index: -1;
-  border-radius: 4px;
+  background: linear-gradient(to top, var(--accent-green) 50%, transparent 50%);
+  background-position: 0 1.05em;
+  background-size: 100% 10px; /* A altura do sublinhado é definida aqui */
+  background-repeat: repeat-x;
 }
 
 .hero-description {
@@ -587,6 +579,8 @@ body {
     display: none;
   }
 
+  
+
   .feature {
     justify-content: center;
   }
@@ -608,9 +602,7 @@ body {
     display: flex;
   }
 
-  .hero {
-    padding: 100px 0 60px;
-  }
+
 
   .hero-title {
     font-size: 2.5rem;
@@ -659,9 +651,9 @@ body {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   .hero-title {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .section-title {
