@@ -134,7 +134,7 @@ body {
 
 /* Hero Section */
 .hero {
-  padding: 280px 0;
+  padding: 240px 0;
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=1920&h=1080&fit=crop');
   background-size: cover;
   background-position: center;
@@ -142,6 +142,8 @@ body {
   color: var(--white);
   overflow: hidden;
   min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .hero-container {
@@ -579,7 +581,6 @@ body {
     display: none;
   }
 
-  
 
   .feature {
     justify-content: center;
@@ -653,7 +654,12 @@ body {
 
 @media (max-width: 500px) {
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+  }
+
+  
+  .hero {
+    padding: 200px 0;
   }
 
   .section-title {
