@@ -322,7 +322,6 @@ body {
 }
 
 .about-item:hover {
-  transition: none !important;
   transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
   border-color: var(--primary-green);
